@@ -1,0 +1,27 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "Checking AWS CLI version..."
+      - aws --version
+
+  pre_build:
+    commands:
+      - echo "Verifying the presence of the correct title in index.html..."
+      - grep -q 'Welcome to Vitality Sphere' index.html && echo "Title verification passed." || exit 1
+
+  build:
+    commands:
+      - echo "Build phase initiated on `date`"
+      - echo "No specific build tasks are required."
+
+  post_build:
+    commands:
+      - echo "Preparations completed on `date`"
+      - echo "Ready for deployment stage."
+
+artifacts:
+  files:
+    - '**/*'
+  discard-paths: yes
