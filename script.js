@@ -1,5 +1,6 @@
 function sendPageVisit() {
-    const apiUrl = 'https://wtdns3lgm8.execute-api.us-east-1.amazonaws.com/prod/metrics';
+    const apiUrl = 'https://vvgkfs7nn4.execute-api.us-east-1.amazonaws.com/prod/metrics'; // ✅ Replace with your actual API Gateway URL if different
+
     const data = {
         page: window.location.pathname
     };
@@ -13,10 +14,10 @@ function sendPageVisit() {
     })
     .then(response => response.json())
     .then(data => {
-        console.log('Success:', data);
+        console.log('Visit recorded:', data.message);
     })
     .catch((error) => {
-        console.error('Error:', error);
+        console.error('Tracking error:', error);
     });
 }
 
