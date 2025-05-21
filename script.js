@@ -1,5 +1,5 @@
 function sendPageVisit() {
-    const apiUrl = 'https://vvgkfs7nn4.execute-api.us-east-1.amazonaws.com/prod/metrics'; // ✅ Replace with your actual API Gateway URL if different
+    const apiUrl = 'https://29ppfzxlsb.execute-api.us-east-1.amazonaws.com/prod'; // ✅ Replace with your actual API Gateway URL if different
 
     const data = {
         page: window.location.pathname
