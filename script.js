@@ -21,6 +21,7 @@ function sendPageVisit() {
         console.error('Tracking error:', error);
     });
 
+    
 }
 
 window.onload = sendPageVisit;
