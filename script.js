@@ -4,6 +4,7 @@ function sendPageVisit() {
     const data = {
         page: window.location.pathname
     };
+    
 
     fetch(apiUrl, {
         method: 'POST',
