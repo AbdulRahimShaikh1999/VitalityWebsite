@@ -20,7 +20,7 @@ function sendPageVisit() {
     .catch((error) => {
         console.error('Tracking error:', error);
     });
-    
+
 }
 
 window.onload = sendPageVisit;
